@@ -125,6 +125,11 @@ function initFacebookPixel() {
         console.log('Facebook Pixel جاهز للتتبع');
     }
 }
+document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', function() {
+        gtag_report_conversion(link.href);
+    });
+});
 
 // دالة لحساب السعر التقريبي (يمكن تطويرها)
 function estimatePrice(area, serviceType) {
@@ -151,4 +156,5 @@ if (typeof module !== 'undefined' && module.exports) {
         initGoogleAnalytics,
         initFacebookPixel
     };
+
 }
