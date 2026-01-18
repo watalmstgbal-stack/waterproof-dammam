@@ -123,6 +123,24 @@
         }
     }
     </script>
+    <!-- Event snippet for انقر للاتصال conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-666953375/ea50CPuj6ucbEJ_Ng74C',
+      'value': 1.0,
+      'currency': 'SAR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
     <!-- WhatsApp Button -->
@@ -517,5 +535,6 @@
   
 </body>
 </html>
+
 
 
